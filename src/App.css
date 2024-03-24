@@ -1,38 +1,159 @@
 .App {
   text-align: center;
+  margin-top: 30px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: system-ui, sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Navbar CSS */
+ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+a {
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 17px;
+}
+
+/* Home Component CSS*/
+.about-container {
+  margin-top: 40px;
+  font-size: 24px;
+  font-weight: 400;
+  color: #90999B;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+}
+
+.bucket-container {
+  height: 350px;
+  width: 150px;
+  border: 1px solid;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 40px;
+}
+
+.button {
+  height: 40px;
+  width: 100px;
+  border: 1px solid;
+  border-radius: 7px;
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.button-container {
+  margin-top: 110px;
+  padding: 40px;
+}
+
+/*Game Component CSS*/
+.game-container {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.game-box {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  border: 1px solid rgb(49, 49, 225);
+  border-radius: 25px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.small-box {
+  width: 100px;
+  height: 100px;
+  border: 1px solid rgb(49, 49, 225);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Apply border radii to specific boxes */
+.small-box:nth-child(1) {
+  border-top-left-radius: 25px;
+}
+
+.small-box:nth-child(3) {
+  border-top-right-radius: 25px;
+}
+
+.small-box:nth-child(7) {
+  border-bottom-left-radius: 25px;
+}
+
+.small-box:nth-child(9) {
+  border-bottom-right-radius: 25px;
+}
+
+.game-start-button {
+  border: 1px solid rgb(49, 49, 225);
+  background-color: white;
+  margin: 10px;
+  padding: 5px;
+  height: 40px;
+  width: 100px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+/*Nested List CSS  */
+.nested-list-container {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  width: 200px;
+  border: 1px solid gray;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.parent-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.child-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.subchild-container {
+  text-align: left;
+}
+
+.parent-container:hover {
+  background-color: rgb(210, 209, 209);
+}
+
+.parent-container.clicked {
+  background-color: rgb(210, 209, 209);
+}
+
+.child-container:hover {
+  background-color: rgb(124, 149, 249);
+}
+
+.child-container.clicked {
+  background-color: rgb(124, 149, 249);
 }
