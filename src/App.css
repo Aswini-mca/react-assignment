@@ -116,12 +116,28 @@ a {
 }
 
 /*Nested List CSS  */
+.nested-container{
+  height: 500px;
+  width: 1000px;
+  border: 1px solid;
+  justify-content: left;
+  display: flex;
+  margin: 70px;
+  margin-left: 210px;
+}
+.container-left{
+  display: flex;
+  justify-content: left;
+  margin: 50px;
+}
 .nested-list-container {
   display: flex;
   flex-direction: column;
   height: 400px;
   width: 200px;
   border: 1px solid gray;
+  border-top: none;
+  border-bottom: none;
   cursor: pointer;
   padding: 10px;
 }
@@ -143,7 +159,7 @@ a {
 }
 
 .parent-container:hover {
-  background-color: rgb(210, 209, 209);
+  background-color: rgb(249, 247, 247);
 }
 
 .parent-container.clicked {
@@ -151,9 +167,14 @@ a {
 }
 
 .child-container:hover {
-  background-color: rgb(124, 149, 249);
+  background-color: rgb(237, 239, 248);
 }
 
 .child-container.clicked {
   background-color: rgb(124, 149, 249);
+}
+
+/* Scroll Page CSS*/
+.scroll-page{
+  height: 500px;
 }

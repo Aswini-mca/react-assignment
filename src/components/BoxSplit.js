@@ -3,15 +3,15 @@ import Home from './Home';
 
 function BoxSplit() {
 
-    const [boxes, setBoxes] = useState([{ id: 1, size: 400 }]); // Initial square box
+    const [boxes, setBoxes] = useState([{ id: 1, size: 400}]); // Initial square box
 
     const handleClick = (boxId, size) => {
        
         // If the size of the box is less than or equal to 1, stop splitting
         if (size <= 1) return;
 
-        // Remove the clicked box
-        const updatedBoxes = boxes.filter(box => box.id !== boxId);
+         // Remove the clicked box
+         const updatedBoxes = boxes.filter(box => box.id !== boxId);
 
         // Calculate size for the smaller squares
         const newSize = size / 2;
@@ -57,7 +57,6 @@ function BoxSplit() {
         ));
             
     };
-
 
     return (
         <div>

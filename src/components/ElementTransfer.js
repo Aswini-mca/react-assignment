@@ -18,6 +18,12 @@ function ElementTransfer() {
             alert("No item selected!");
             return;
         }
+        // Check if any selected item belongs to Bucket 2
+        const selectedItemsInBucket2 = selectedItems.some(item => bucket2.includes(item));
+        if (selectedItemsInBucket2) {
+            alert("Select items from Bucket 1 only to Add!");
+            return;
+        }
         setBucket2([...bucket2, ...selectedItems]); // Add selected items to Bucket 2
         setBucket1(bucket1.filter(item => !selectedItems.includes(item))); // Remove selected items from Bucket 1
         setSelectedItems([]); // Clear selected items
@@ -58,17 +64,17 @@ function ElementTransfer() {
         setBucket2([]); // Empty Bucket 2
     };
 
-     // Function to handle item click (select/deselect item)
-        const handleItemClick = (item) => {
+    // Function to handle item click (select/deselect item)
+    const handleItemClick = (item) => {
 
-            if (selectedItems.includes(item)) {
-                // If item is already selected, deselect it
-                setSelectedItems(selectedItems.filter(selectedItem => selectedItem !== item));
-            } else {
-                // If item is not selected, select it
-                setSelectedItems([...selectedItems, item]);
-            }
-        };
+        if (selectedItems.includes(item)) {
+            // If item is already selected, deselect it
+            setSelectedItems(selectedItems.filter(selectedItem => selectedItem !== item));
+        } else {
+            // If item is not selected, select it
+            setSelectedItems([...selectedItems, item]);
+        }
+    };
 
     return (
         <div>
